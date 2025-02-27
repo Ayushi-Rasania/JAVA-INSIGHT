@@ -39,15 +39,6 @@
 <div class="container">
     <h2 class="text-center">Signup Form</h2>
 
-    <!-- ✅ Success/Error Message -->
-    <% String message = (String) request.getAttribute("msg");
-       String msgType = (String) request.getAttribute("msgType");
-       if (message != null) { %>
-        <div class="alert <%= (msgType.equals("success")) ? "alert-success" : "alert-error" %>">
-            <%= message %>
-        </div>
-    <% } %>
-
     <form action="PersonController" method="post">
         <input type="hidden" name="action" value="register">
 

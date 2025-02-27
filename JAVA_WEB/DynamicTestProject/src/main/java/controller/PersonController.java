@@ -56,22 +56,10 @@ public class PersonController extends HttpServlet {
             p.setLanguage(language);
             p.setGender(request.getParameter("gender"));
 
-            System.out.println(p); // Debugging purpose
+            System.out.println(p); 
+            PersonDao.insertPerson(p);
+            response.sendRedirect("signup.jsp");
 
-            HttpSession session = request.getSession();
-
-            // Insert user into database
-            int status = PersonDao.insertPerson(p);
-
-            if (status > 0) {
-                session.setAttribute("msg", "Data Registered Successfully!");
-                session.setAttribute("msgType", "success");
-            } else {
-                session.setAttribute("msg", "Invalid Registration, Try again!");
-                session.setAttribute("msgType", "error");
-            }
-
-            response.sendRedirect("signup.jsp"); // Redirect to signup page
         }
 	}
 }
