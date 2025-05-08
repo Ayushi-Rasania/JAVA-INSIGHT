@@ -1,0 +1,36 @@
+<!-- 1. Createa webpagewhere:
+ o Youapplyinline CSS to anelement.
+ o UseinternalCSS for another element.
+ o Linkanexternal CSS file to style other elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Webpage</title>
+
+    <!-- Internal CSS -->
+    <style>
+        .internal-style {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Inline CSS -->
+    <h1 style="color: red; text-align: center;">TOPS Technologies</h1>
+
+    <!-- Internal CSS applied -->
+    <p class="internal-style">This text is styled using internal CSS.</p>
+
+    <!-- External CSS applied -->
+    <div class="external-style">This box is styled using external CSS.</div>
+
+</body>
+</html>
