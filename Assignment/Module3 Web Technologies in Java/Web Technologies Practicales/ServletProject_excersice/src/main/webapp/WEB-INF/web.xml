@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<servlet>
+		<servlet-name>HeaderServlet</servlet-name>
+		<servlet-class>com.servlet.HeaderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HeaderServlet</servlet-name>
+		<url-pattern>/showHeaders</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>com.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/userServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GenericExample</servlet-name>
+		<servlet-class>com.generic.http.servlet.GenericExample</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GenericExample</servlet-name>
+		<url-pattern>/generic</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HttpExample</servlet-name>
+		<servlet-class>com.generic.http.servlet.HttpExample</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpExample</servlet-name>
+		<url-pattern>/http</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HttpRequestHandler</servlet-name>
+		<servlet-class>com.HttpRequestHandler.HttpRequestHandler</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpRequestHandler</servlet-name>
+		<url-pattern>/HttpRequestHandler</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LifeCycleDemo</servlet-name>
+		<servlet-class>com.servlet.LifeCycleDemoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LifeCycleDemo</servlet-name>
+		<url-pattern>/lifeCycleDemo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>com.servlet.HelloServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfigExampleServlet</servlet-name>
+		<servlet-class>com.servlet.ConfigExampleServlet</servlet-class>
+		<init-param>
+			<param-name>companyName</param-name>
+			<param-value>Enprowess Technology</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfigExampleServlet</servlet-name>
+		<url-pattern>/config</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ContextSet</servlet-name>
+		<servlet-class>com.servlet.ContextSetServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ContextSet</servlet-name>
+		<url-pattern>/set</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ContextGet</servlet-name>
+		<servlet-class>com.servlet.ContextGetServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ContextGet</servlet-name>
+		<url-pattern>/get</url-pattern>
+	</servlet-mapping>
+
+	<!-- com.practical.examples package configuration -->
+
+	<servlet>
+		<servlet-name>InitParamServlet</servlet-name>
+		<servlet-class>com.practical.example.InitParamServlet</servlet-class>
+		<init-param>
+			<param-name>adminName</param-name>
+			<param-value>Enprowess Admin</param-value>
+		</init-param>
+		<init-param>
+			<param-name>adminEmail</param-name>
+			<param-value>admin@enprowess.com</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitParamServlet</servlet-name>
+		<url-pattern>/init</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>companyName</param-name>
+		<param-value>Enprowess technology</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>FirstServlet</servlet-name>
+		<servlet-class>com.practical.example.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FirstServlet</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SecondServlet</servlet-name>
+		<servlet-class>com.practical.example.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SecondServlet</servlet-name>
+		<url-pattern>/second</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.practical.example.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>ValidationFilter</filter-name>
+		<filter-class>com.practical.example.ValidationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ValidationFilter</filter-name>
+		<url-pattern>/SubmitServlet</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>SubmitServlet</servlet-name>
+		<servlet-class>com.practical.example.SubmitServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitServlet</servlet-name>
+		<url-pattern>/SubmitServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>InputValidationFilter</filter-name>
+		<filter-class>com.practical.example.InputValidationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>InputValidationFilter</filter-name>
+		<url-pattern>/processForm</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>FormServlet</servlet-name>
+		<servlet-class>com.practical.example.FormServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FormServlet</servlet-name>
+		<url-pattern>/processForm</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>com.practical.example.UserLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/UserLoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<servlet-class>com.practical.example.UserLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<url-pattern>/UserLogoutServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
