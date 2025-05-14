@@ -1,2 +1,0 @@
-Hello, this is a sample text.
-FileReader and FileWriter example in Java.
